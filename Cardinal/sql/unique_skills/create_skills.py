@@ -1,4 +1,4 @@
-#Insert Data into Table
+        #Create Table
 
 import sqlite3
 
@@ -7,10 +7,7 @@ try:
     cursor = sqliteConnection.cursor()
     print("Successfully Connected to SQLite")
 
-    sqlite_insert_query = """INSERT INTO experience
-                          (level, experience)
-                           VALUES 
-                          (1, 100)"""
+    sqlite_insert_query = """CREATE TABLE sword_skills(ID int AUTOINCRIMEN PRIMARY KEY, skill_name VARCHAR(20), skill_description VARCHAR(200), skill_hits(3), skill_effects VARCHAR(200), skill_type VARCHAR(20), skill_power int);"""
 
     count = cursor.execute(sqlite_insert_query)
     sqliteConnection.commit()

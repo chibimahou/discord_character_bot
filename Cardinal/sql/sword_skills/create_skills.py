@@ -7,7 +7,7 @@ try:
     cursor = sqliteConnection.cursor()
     print("Successfully Connected to SQLite")
 
-    sqlite_insert_query = """CREATE TABLE charactersheets(firstName varchar(30), lastName varchar(30), height varchar(30), size varchar(30), age varchar(2), skillList varchar(100), inventory varchar(100), bio varchar(1000), guild varchar(20), class varchar(20), playerColor varchar(6), birthday varchar(20), nickname varchar(20), uniqueSkills varchar(20), playerStatus varchar (20), currentWeaponEquipped varchar(20), col int, experience int, level int, str int, def int, spd int);"""
+    sqlite_insert_query = """CREATE TABLE sword_skills(ID int AUTOINCRIMEN PRIMARY KEY, skill_name VARCHAR(20), skill_description VARCHAR(200), skill_hits(3), skill_effects VARCHAR(200), skill_type VARCHAR(20), skill_power int);"""
 
     count = cursor.execute(sqlite_insert_query)
     sqliteConnection.commit()
